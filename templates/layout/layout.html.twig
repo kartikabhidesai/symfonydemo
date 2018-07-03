@@ -1,0 +1,28 @@
+{# templates/layout/layout.html.twig #}
+<!doctype html>
+<html lang="en-us">
+    {{ include('layout/include/header.html.twig') }}
+    
+    <body class="o-page">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        {{ include('layout/include/sidebar.html.twig') }}
+      
+
+        <main class="o-page__content">
+             {{ include('layout/include/bodyheader.html.twig') }}
+            
+
+            
+
+            <div class="container-fluid">
+                {% block body %}{% endblock %}
+               
+            </div><!-- // .container -->
+            
+        </main><!-- // .o-page__content -->
+        {{ include('layout/include/footer.html.twig') }}
+        
+    </body>
+</html>
